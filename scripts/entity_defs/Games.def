@@ -1,0 +1,73 @@
+<root>
+	<Implements>
+	</Implements>
+
+	<Properties>
+	    <income>
+			<Type>			FLOAT				</Type>
+			<Flags>			BASE			    </Flags>
+			<Default>								</Default>
+		    <Persistent>		true				</Persistent>
+		</income>
+
+	</Properties>
+
+	<BaseMethods>
+
+        <addIncome>
+			<Arg>	FLOAT	</Arg>
+		</addIncome>
+
+        <reqEnterGames>
+			<!-- 玩家的mailbox -->
+			<Arg>	MAILBOX	</Arg>
+		</reqEnterGames>
+
+		<reqLeaveGames>
+			<!-- 玩家的mailbox -->
+			<Arg>	MAILBOX	</Arg>
+		</reqLeaveGames>
+
+		<reqChargeToPlayer>
+			<Arg>	UNICODE	</Arg>
+			<Arg>	FLOAT	</Arg>
+		</reqChargeToPlayer>
+
+		<!-- 客户端调用该接口请求进入大厅 -->
+		<reqEnterGame>
+			<!-- 玩家的mailbox -->
+			<Arg>	MAILBOX	</Arg>
+
+			<!-- 大厅的ID -->
+			<Arg>	INT32	</Arg>
+		</reqEnterGame>
+
+		<!-- 客户端调用该接口请求离开大厅 -->
+		<reqLeaveGame>
+			<!-- 玩家的mailbox -->
+			<Arg>	MAILBOX	</Arg>
+
+			<!-- 大厅的ID -->
+			<Arg>	INT32	</Arg>
+		</reqLeaveGame>
+
+
+		<!-- 大厅向大厅管理器注册大厅 -->
+		<addHalls>
+			<!-- 大厅的ID -->
+			<Arg>	INT32	</Arg>
+
+			<!-- 大厅的mailbox -->
+			<Arg>	MAILBOX	</Arg>
+		</addHalls>
+
+		<!-- 请求游戏信息 -->
+		<reqGameInfo>
+		<Arg>  MAILBOX   </Arg>
+		</reqGameInfo>
+	</BaseMethods>
+
+	<CellMethods>
+	</CellMethods>
+</root>
+

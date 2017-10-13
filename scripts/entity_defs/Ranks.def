@@ -1,0 +1,23 @@
+<root>
+	<Implements>
+	</Implements>
+
+	<Properties>
+	</Properties>
+
+	<BaseMethods>
+	    <reqRanksInfo>
+	        <Exposed/>
+	        <Arg> MAILBOX </Arg>
+	    </reqRanksInfo>
+
+	    <reqMyRankInfo>
+	        <Exposed/>
+	        <Arg> MAILBOX </Arg>
+	    </reqMyRankInfo>
+	</BaseMethods>
+
+	<CellMethods>
+	</CellMethods>
+</root>
+

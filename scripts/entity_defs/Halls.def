@@ -1,0 +1,113 @@
+<root>
+	<Implements>
+	</Implements>
+
+	<Properties>
+		<hallsID>
+			<Type>			INT32				</Type>
+			<Flags>			BASE				</Flags>
+		</hallsID>
+		<hallsName>
+		    <Type>			UNICODE				</Type>
+			<Flags>			BASE				</Flags>
+		</hallsName>
+		<open>
+		    <Type>			UINT8				</Type>
+			<Flags>			BASE				</Flags>
+		</open>
+	</Properties>
+
+	<BaseMethods>
+		<!-- 进入游戏并返回Infos -->
+		<reqEnterHalls>
+			<Arg>	MAILBOX	</Arg>
+		</reqEnterHalls>
+
+		<!-- 离开游戏 -->
+		<reqLeaveHalls>
+			<Arg>	MAILBOX	</Arg>
+		</reqLeaveHalls>
+
+		<!-- 客户端调用该接口请求说话 -->
+		<say>
+			<!-- 玩家的mailbox -->
+			<Arg>	MAILBOX	</Arg>
+			
+			<!-- 大厅的ID -->
+			<Arg>	INT32	</Arg>
+
+			<!-- 房间的ID -->
+			<Arg>	INT32	</Arg>
+
+			<!-- 说话的内容 -->
+			<Arg>	UNICODE	</Arg>	
+		</say>
+
+		<!--  -->
+		<reqEnterHall>
+			<!-- 玩家的mailbox -->
+			<Arg>	MAILBOX	</Arg>
+
+			<!-- 大厅的ID -->
+			<Arg>	INT32	</Arg>
+		</reqEnterHall>
+
+		<!-- 客户端调用该接口请求离开大厅 -->
+		<reqLeaveHall>
+			<!-- 玩家的mailbox -->
+			<Arg>	MAILBOX	</Arg>
+
+			<!-- 大厅的ID -->
+			<Arg>	INT32	</Arg>
+		</reqLeaveHall>
+
+        <!-- 获取玩家数量 -->
+		<reqPlayerCount>
+		</reqPlayerCount>
+
+
+		<!-- 客户端调用该接口请求进入大厅房间/桌子 -->
+		<reqEnterRoom>
+			<!-- 玩家的mailbox -->
+			<Arg>	MAILBOX	</Arg>
+
+			<!-- 大厅的ID -->
+			<Arg>	INT32	</Arg>
+		</reqEnterRoom>
+
+
+		<!-- 客户端调用该接口请求离开房间 -->
+		<reqLeaveRoom>
+			<!-- 玩家的mailbox -->
+			<Arg>	MAILBOX	</Arg>
+
+			<!-- 大厅的ID -->
+			<Arg>	INT32	</Arg>
+
+			<!-- 房间的ID -->
+			<Arg>	INT32	</Arg>
+		</reqLeaveRoom>
+
+		<!-- 大厅向大厅管理器删除大厅 -->
+		<removeHall>
+			<!-- 大厅的ID -->
+			<Arg>	INT32	</Arg>
+		</removeHall>
+
+		<reqMessage>
+		    <Arg>	MAILBOX	</Arg>
+            <Arg>	INT32	</Arg>
+            <Arg>	UNICODE	</Arg>
+		</reqMessage>
+
+		<reqContinue>
+		    <Arg>	MAILBOX	</Arg>
+            <Arg>	INT32	</Arg>
+            <Arg>	INT32	</Arg>
+		</reqContinue>
+	</BaseMethods>
+
+	<CellMethods>
+	</CellMethods>
+</root>
+

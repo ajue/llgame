@@ -1,0 +1,434 @@
+<root>
+	<Properties>
+
+	<alipay>
+			<Type>			UNICODE					</Type>
+			<Flags>			BASE_AND_CLIENT	      	</Flags>
+			<Default>								</Default>
+			<Persistent>		true				</Persistent>
+	</alipay>
+
+	<name>
+			<Type>			UNICODE					</Type>
+			<Flags>			BASE_AND_CLIENT	      	</Flags>
+			<Default>								</Default>
+			<Persistent>		true				</Persistent>
+	</name>
+
+	<gold>
+			<Type>			FLOAT					</Type>
+			<Flags>			BASE_AND_CLIENT	 		</Flags>
+			<Default>								</Default>
+			<Persistent>		true				</Persistent>
+	</gold>
+
+	<bankGold>
+			<Type>			FLOAT					</Type>
+			<Flags>			BASE_AND_CLIENT	 		</Flags>
+			<Default>								</Default>
+			<Persistent>		true				</Persistent>
+	</bankGold>
+
+	<sex>
+	        <Type>			INT32					</Type>
+			<Flags>			BASE_AND_CLIENT	 		</Flags>
+			<Default>								</Default>
+			<Persistent>		true				</Persistent>
+	</sex>
+
+	<head>
+	        <Type>			INT32					</Type>
+			<Flags>			BASE_AND_CLIENT	 		</Flags>
+			<Default>								</Default>
+			<Persistent>	true				</Persistent>
+	</head>
+
+    <addr>
+	        <Type>			UNICODE					</Type>
+			<Flags>			BASE_AND_CLIENT	 		</Flags>
+			<Default>								</Default>
+			<Persistent>	true				</Persistent>
+	</addr>
+
+    <!-- 0在线，1游戏中 -->
+	<state>
+	        <Type>			INT32					</Type>
+			<Flags>			BASE_AND_CLIENT	 		</Flags>
+			<Default>		0						</Default>
+	</state>
+
+
+
+	<!-- Cell 属性 -->
+    <dbid>
+			<Type>		DBID				</Type>
+			<Flags>		CELL_PUBLIC			</Flags>
+			<Default>		0				</Default>
+	</dbid>
+
+	<cid>
+			<Type>		INT32				</Type>
+			<Flags>		ALL_CLIENTS			</Flags>
+			<Default>		0				</Default>
+	</cid>
+
+    <cards>
+			<Type>	ARRAY <of> INT32 </of>    </Type>
+			<Flags>		OWN_CLIENT			</Flags>
+			<Default>		0				</Default>
+	</cards>
+
+    <showCards>
+			<Type>	ARRAY <of> INT32 </of>    </Type>
+			<Flags>		ALL_CLIENTS			</Flags>
+			<Default>		0				</Default>
+	</showCards>
+
+	<cardCount>
+			<Type>		INT32				</Type>
+			<Flags>		ALL_CLIENTS			</Flags>
+			<Default>		0				</Default>
+	</cardCount>
+
+    <!-- 0为无，1为地主，2为农民 -->
+	<type>
+			<Type>		INT32				</Type>
+			<Flags>		ALL_CLIENTS			</Flags>
+			<Default>		0				</Default>
+	</type>
+
+	<curScore>
+			<Type>		INT32				</Type>
+			<Flags>		ALL_CLIENTS			</Flags>
+			<Default>		0				</Default>
+	</curScore>
+
+	<tuoguan>
+			<Type>		UINT8				</Type>
+			<Flags>		ALL_CLIENTS			</Flags>
+			<Default>		0				</Default>
+	</tuoguan>
+
+	<multiple>
+			<Type>		INT32				</Type>
+			<Flags>		ALL_CLIENTS			</Flags>
+			<Default>		0				</Default>
+	</multiple>
+
+	<nameC>
+			<Type>			UNICODE					</Type>
+			<Flags>			ALL_CLIENTS	      	</Flags>
+			<Default>								</Default>
+	</nameC>
+
+	<goldC>
+			<Type>			FLOAT					</Type>
+			<Flags>			ALL_CLIENTS	 		</Flags>
+			<Default>								</Default>
+	</goldC>
+
+	<sexC>
+	        <Type>			INT32					</Type>
+			<Flags>			ALL_CLIENTS	 		</Flags>
+			<Default>								</Default>
+	</sexC>
+
+	<headC>
+	        <Type>			INT32					</Type>
+			<Flags>			ALL_CLIENTS	 		</Flags>
+			<Default>								</Default>
+	</headC>
+
+    <addrC>
+	        <Type>			UNICODE					</Type>
+			<Flags>			ALL_CLIENTS	 		   </Flags>
+			<Default>								</Default>
+	</addrC>
+
+    <!-- zjh -->
+	<cost>
+	        <Type>			FLOAT					</Type>
+			<Flags>			ALL_CLIENTS	 		   </Flags>
+			<Default>			0					</Default>
+	</cost>
+
+	<chip>
+	        <Type>			FLOAT					</Type>
+			<Flags>			ALL_CLIENTS	 		   </Flags>
+			<Default>			0					</Default>
+	</chip>
+
+	<lookcard>
+	        <Type>			UINT8					</Type>
+			<Flags>			ALL_CLIENTS	 		    </Flags>
+			<Default>			0					</Default>
+	</lookcard>
+
+	<first>
+	        <Type>			UINT8					</Type>
+			<Flags>			ALL_CLIENTS	 		</Flags>
+			<Default>		0						</Default>
+	</first>
+
+	<stateC>
+	        <Type>			INT32					</Type>
+			<Flags>			ALL_CLIENTS	 		   </Flags>
+			<Default>		0						</Default>
+	</stateC>
+
+	</Properties>
+
+	<ClientMethods>
+	    <onRoomState>
+		    <Arg> UNICODE </Arg>
+		</onRoomState>
+
+        <!-- 返回游戏信息 -->
+		<onGameInfo>
+		    <Arg>	UNICODE	</Arg>
+		</onGameInfo>
+
+		<!-- 返回游戏配置 -->
+		<onGamesConfig>
+		    <Arg>	UNICODE	</Arg>
+		</onGamesConfig>
+
+        <onCashInfo>
+            <Arg>	INT32	</Arg>
+            <Arg>	INT32	</Arg>
+            <Arg>	INT32	</Arg>
+		</onCashInfo>
+
+        <onCash>
+			<Arg>	INT32		</Arg>
+			<Arg>	FLOAT		</Arg>
+			<Arg>	UNICODE		</Arg>
+		</onCash>
+
+        <onCharge>
+        	<Arg>	FLOAT		</Arg>
+			<Arg>	FLOAT		</Arg>
+		</onCharge>
+		<!-- 服务器返回某人发送聊天信息 -->
+		<onSay>
+			<Arg>	UNICODE		</Arg>
+		</onSay>
+
+        <!-- 服务器返回游戏大厅信息 -->
+		<onEnterGame>
+		    <Arg>	INT32	</Arg>
+		    <Arg>	UNICODE	</Arg>
+		</onEnterGame>
+		<!-- 离开对应游戏 -->
+        <onLeaveGame>
+		    <Arg>	INT32	</Arg>
+		</onLeaveGame>
+
+        <!-- 进入对应hall -->
+		<onEnterHall>
+		    <Arg>	INT32	</Arg>
+		</onEnterHall>
+		<!-- 离开游戏hall -->
+        <onLeaveHall>
+		    <Arg>	INT32	</Arg>
+		</onLeaveHall>
+
+		<onStartGame>
+		</onStartGame>
+
+		<onEnterRoom>
+		    <Arg>  UNICODE </Arg>
+		</onEnterRoom>
+
+        <onLeaveRoom>
+            <Arg>  INT32	</Arg>
+		    <Arg>  INT32 </Arg>
+		</onLeaveRoom>
+
+		<onContinue>
+		</onContinue>
+
+        <onMessage>
+            <Arg> INT32</Arg>
+            <Arg> INT32</Arg>
+            <Arg> UNICODE </Arg>
+        </onMessage>
+
+        <onRegisterProperties>
+            <Arg> INT32</Arg>
+        </onRegisterProperties>
+
+        <onAccessBank>
+            <Arg> INT32</Arg>
+            <Arg> FLOAT</Arg>
+            <Arg> FLOAT</Arg>
+        </onAccessBank>
+
+        <onReviseProperties>
+            <Arg>  INT32 </Arg>
+			<Arg>  UNICODE </Arg>
+			<Arg>  INT32 </Arg>
+			<Arg>  INT32 </Arg>
+		</onReviseProperties>
+
+		<onNoticeInfos>
+		    <Arg>  UNICODE </Arg>
+		</onNoticeInfos>
+
+		<onRanksInfo>
+		    <Arg>  UNICODE </Arg>
+		</onRanksInfo>
+
+		<onMyRankInfo>
+		    <Arg>  UNICODE </Arg>
+		</onMyRankInfo>
+
+		<onRefresh>
+			 <Arg>  UNICODE </Arg>
+		</onRefresh>
+
+	</ClientMethods>
+
+	<BaseMethods>
+	    <createCell>
+			<Arg>		MAILBOX					</Arg>
+		</createCell>
+
+        <reqRefresh>
+			<Exposed/>
+			<Utype> 9999 </Utype>
+		</reqRefresh>
+
+        <reqGamesConfig>
+			<Exposed/>
+			<Utype> 10000 </Utype>
+		</reqGamesConfig>
+
+        <reqCashInfo>
+			<Exposed/>
+			<Utype> 10001 </Utype>
+
+            <Arg>	INT32	</Arg>
+		</reqCashInfo>
+
+        <reqCash>
+			<Exposed/>
+			<Utype> 10002 </Utype>
+
+            <Arg>	INT32	</Arg>
+			<Arg>	UNICODE	</Arg>
+		</reqCash>
+
+		<!-- 客户端调用该接口请求进入游戏-->
+		<reqEnterGame>
+			<Exposed/>
+			<Utype> 10005 </Utype>
+
+			<!-- 大厅的ID -->
+			<Arg>	INT32	</Arg>
+		</reqEnterGame>
+
+		<!-- 客户端调用该接口请求离开游戏 -->
+		<reqLeaveGame>
+			<Exposed/>
+			<Utype> 10006 </Utype>
+		</reqLeaveGame>
+
+		<reqEnterHall>
+			<Exposed/>
+			<Utype> 10007 </Utype>
+			<!-- 大厅的ID -->
+			<Arg>	INT32	</Arg>
+		</reqEnterHall>
+
+		<reqLeaveHall>
+			<Exposed/>
+			<Utype> 10008 </Utype>
+		</reqLeaveHall>
+
+
+		<!-- 请求游戏信息 -->
+		<reqGameInfo>
+			<Exposed/>
+			<Utype> 10011 </Utype>
+		</reqGameInfo>
+
+		<reqEnterRoom>
+			<Exposed/>
+			<Utype> 10013 </Utype>
+			<Arg>	UNICODE	</Arg>
+		</reqEnterRoom>
+
+		<reqLeaveRoom>
+			<Exposed/>
+			<Utype> 10014 </Utype>
+		</reqLeaveRoom>
+
+		<reqMessage>
+			<Exposed/>
+			<Utype> 10015 </Utype>
+			<Arg>  INT32 </Arg>
+			<Arg>  UNICODE </Arg>
+		</reqMessage>
+
+		<reqAccessBank>
+			<Exposed/>
+			<Utype> 10016 </Utype>
+			<Arg>  INT32 </Arg>
+			<Arg>  FLOAT </Arg>
+		</reqAccessBank>
+
+		<reqReviseProperties>
+			<Exposed/>
+			<Utype> 10017 </Utype>
+			<Arg>  UNICODE </Arg>
+			<Arg>  INT32 </Arg>
+			<Arg>  INT32 </Arg>
+		</reqReviseProperties>
+
+		<reqNoticeInfos>
+			<Exposed/>
+			<Utype> 10018 </Utype>
+		</reqNoticeInfos>
+
+		<reqRanksInfo>
+	        <Exposed/>
+	        <Utype> 10019 </Utype>
+	    </reqRanksInfo>
+
+	    <reqMyRankInfo>
+	        <Exposed/>
+	        <Utype> 10020 </Utype>
+	    </reqMyRankInfo>
+
+        <reqContinue>
+            <Exposed/>
+	        <Utype> 10021 </Utype>
+		</reqContinue>
+
+
+        <set_gold>
+            <Arg> FLOAT</Arg>
+        </set_gold>
+
+	</BaseMethods>
+
+	<CellMethods>
+
+	    <reqMessageC>
+	        <Exposed/>
+            <Arg> INT32</Arg>
+            <Arg> UNICODE </Arg>
+        </reqMessageC>
+
+        <set_gold>
+            <Arg> FLOAT</Arg>
+        </set_gold>
+
+        <set_AoiRadius>
+            <Arg> FLOAT</Arg>
+        </set_AoiRadius>
+
+	</CellMethods>
+
+</root>

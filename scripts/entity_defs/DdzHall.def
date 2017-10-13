@@ -1,0 +1,53 @@
+<root>
+	<Implements>
+	</Implements>
+
+	<Properties>
+		<hallID>
+			<Type>			INT32				</Type>
+			<Flags>			BASE				</Flags>
+		</hallID>
+	</Properties>
+
+	<BaseMethods>
+		<reqEnterHall>
+			<!-- 玩家的mailbox -->
+			<Arg>	MAILBOX	</Arg>
+		</reqEnterHall>
+
+		<reqLeaveHall>
+			<!-- 玩家的mailbox -->
+			<Arg>	MAILBOX	</Arg>
+		</reqLeaveHall>
+
+		<reqEnterRoom>
+			<!-- 玩家的mailbox -->
+			<Arg>	MAILBOX	</Arg>
+
+			<!-- 房间的ID -->
+			<Arg>	INT64	</Arg>
+		</reqEnterRoom>
+
+		<reqLeaveRoom>
+			<!-- 玩家的mailbox -->
+			<Arg>	MAILBOX	</Arg>
+
+			<!-- 房间的ID -->
+			<Arg>	INT64	</Arg>
+		</reqLeaveRoom>
+
+		<!-- 获取玩家数量 -->
+		<reqPlayerCount>
+		</reqPlayerCount>
+
+		<reqContinue>
+			<Arg>	MAILBOX	</Arg>
+			<Arg>	INT32	</Arg>
+		</reqContinue>
+
+	</BaseMethods>
+
+	<CellMethods>
+	</CellMethods>
+</root>
+

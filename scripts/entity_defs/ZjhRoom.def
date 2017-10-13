@@ -1,0 +1,108 @@
+<root>
+	<Implements>
+	</Implements>
+
+	<Properties>
+
+		<roomID>
+			<Type>			INT32				</Type>
+			<Flags>			BASE				</Flags>
+		</roomID>
+
+		<parent>
+			<Type>			MAILBOX				</Type>
+			<Flags>			BASE				</Flags>
+		</parent>
+
+		<state>
+			<Type>			INT32				</Type>
+			<Flags>			BASE				</Flags>
+		</state>
+
+		<dizhu>
+			<Type>			FLOAT				</Type>
+			<Flags>			BASE				</Flags>
+		</dizhu>
+
+		<limit>
+			<Type>			FLOAT				</Type>
+			<Flags>			BASE				</Flags>
+		</limit>
+
+		<taxRate>
+			<Type>			FLOAT				</Type>
+			<Flags>			BASE				</Flags>
+		</taxRate>
+
+		<zjList>
+			<Type>	        UNICODE         	</Type>
+			<Flags>			BASE				</Flags>
+		</zjList>
+
+        <!-- Cell 属性 -->
+
+        <stateC>
+			<Type>			INT32				</Type>
+			<Flags>			ALL_CLIENTS				</Flags>
+		</stateC>
+
+		<dizhuC>
+			<Type>			FLOAT				</Type>
+			<Flags>			ALL_CLIENTS				</Flags>
+		</dizhuC>
+
+		<taxRateC>
+			<Type>			FLOAT				</Type>
+			<Flags>			ALL_CLIENTS				</Flags>
+		</taxRateC>
+
+		<jzListC>
+			<Type>      	UNICODE	            </Type>
+			<Flags>			ALL_CLIENTS				</Flags>
+		</jzListC>
+
+	</Properties>
+
+	<BaseMethods>
+		<onEnterRoom>
+			<Arg>	MAILBOX	</Arg>
+		</onEnterRoom>
+
+		<onLeaveRoom>
+			<!-- 玩家的mailbox -->
+			<Arg>	MAILBOX	</Arg>
+		</onLeaveRoom>
+
+		<set_state>
+		    <Arg>	INT32	</Arg>
+		</set_state>
+
+		<hasNull>
+		</hasNull>
+
+		<reqPlayerCount>
+		</reqPlayerCount>
+	</BaseMethods>
+
+	<CellMethods>
+	    <onEnter>
+			<Arg>		MAILBOX		</Arg>
+		</onEnter>
+
+		<onLeave>
+			<Arg>		MAILBOX		</Arg>
+		</onLeave>
+
+		<reqMessage>
+		    <Arg> MAILBOX	</Arg>
+            <Arg> INT32</Arg>
+            <Arg> UNICODE </Arg>
+        </reqMessage>
+
+        <set_state>
+		    <Arg>	INT32	</Arg>
+		</set_state>
+
+	</CellMethods>
+</root>
+
